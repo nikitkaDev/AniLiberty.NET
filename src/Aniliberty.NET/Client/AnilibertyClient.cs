@@ -26,13 +26,6 @@ namespace AniLiberty.NET.Client
     {
         private readonly HttpClient _httpClient;
         private readonly ILogger<AnilibertyClient>? _logger;
-        private static readonly JsonSerializerOptions _jsonOptions = new()
-        {
-            PropertyNameCaseInsensitive = true,
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-            //DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
-            //Converters = { new JsonStringEnumConverter() }
-        };
         
         /// <summary>
         /// Точка входа в Aniliberty.NET
@@ -48,6 +41,17 @@ namespace AniLiberty.NET.Client
             _logger = logger;
             _httpClient = httpClient;
             _httpClient.BaseAddress = baseAdress is null ? new Uri("https://anilibria.top/api/v1/") : new Uri(baseAdress);
+        }
+
+        public AnilibertyClient(
+            ILogger<AnilibertyClient>? logger = null,
+            string? baseAdress = null)
+        {
+            _logger = logger;
+            _httpClient = new()
+            {
+                BaseAddress = baseAdress is null ? new Uri("https://anilibria.top/api/v1/") : new Uri(baseAdress)
+            };
         }
 
         #region ExtensionMethods
@@ -401,7 +405,7 @@ namespace AniLiberty.NET.Client
         /// <param name="pk">Passkey пользователя.</param>
         /// <param name="token"></param>
         /// <returns>Массив байтов, представляющий содержимое торрент-файла.</returns>
-        public Task<byte[]?> GetTorrentBytesStreamAsync(string hashOrId, string pk = "", CancellationToken token = default) => 
+        public Task<byte[]?> GetTorrentBytesAsync(string hashOrId, string pk = "", CancellationToken token = default) => 
             SafeExecuteAsync(() => GetFromAPIAsync($"anime/torrents/{hashOrId}/file?pk={pk}", Array.Empty<byte>(), token));
 
         /// <summary>

@@ -1,22 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Library</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Nullable>enable</Nullable>
-	<Version>1.0.0</Version>
-	<PackageId>AniLiberty.NET</PackageId>
-	<Authors>nikitkadev</Authors>
-	<Description>.NET SDK для AniLiberty API</Description>	  
-	<PackageTags>anime;aniliberty;api;sdk</PackageTags>	  
-	<NuGetAudit>True</NuGetAudit>	  
-	<Title>AniLiberty.NET</Title>  
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.7" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.7" />
-    <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.7" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-  </ItemGroup>
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<PackageId>AniLiberty.NET</PackageId>
+		<Version>1.0.0</Version>
+		<Authors>nikitkadev</Authors>
+		<Description>.NET SDK для AniLiberty API</Description>
+		<PackageTags>anime aniliberty api sdk</PackageTags>
+		<PackageProjectUrl>https://github.com/nikitkaDev/Aniliberty.NET</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/nikitkaDev/Aniliberty.NET</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<NuGetAudit>true</NuGetAudit>
+		<Title>AniLiberty.NET</Title>
+		<PackageReleaseNotes>Initial release of AniLiberty.NET SDK</PackageReleaseNotes>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.7" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.7" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="9.0.7" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	</ItemGroup>
 </Project>
