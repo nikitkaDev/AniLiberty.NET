@@ -4,7 +4,7 @@ AniLiberty SDK  — это .NET библиотека для работы с AniL
 ## Установка пакета NuGet
 
 Команда терминала: 
-
+[NuGet](https://www.nuget.org/packages/AniLiberty.NET)
 `dotnet add package AniLiberty.NET --version 1.0.1`
 
 ## Инициализация клиента
