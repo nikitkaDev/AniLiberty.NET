@@ -9,7 +9,7 @@
 
 ## Шаг 2: Минимальные тесты
 - [x] Unit test для GetFromAPIAsync.
-- [x] Unit test для GetDirectoryListAsync.
+- [x] Unit test для GetDirectoryListAsync .
 
 ## Шаг 3: Документация и примеры
 
