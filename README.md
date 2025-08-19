@@ -2,9 +2,9 @@
 AniLiberty SDK  — это .NET библиотека для работы с AniLiberty API.
 
 ## Установка пакета NuGet
+Ссылка на [NuGet](https://www.nuget.org/packages/AniLiberty.NET)
 
 Команда терминала: 
-[NuGet](https://www.nuget.org/packages/AniLiberty.NET)
 `dotnet add package AniLiberty.NET --version 1.0.1`
 
 ## Инициализация клиента
